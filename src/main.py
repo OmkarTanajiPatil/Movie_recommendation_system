@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import json
 from src.recommend import recommend_movies, df

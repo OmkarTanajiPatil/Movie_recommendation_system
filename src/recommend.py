@@ -1,7 +1,6 @@
 import joblib
 import logging
 from scipy.sparse import load_npz
-import numpy as np
 
 # Setup logging
 logging.basicConfig(

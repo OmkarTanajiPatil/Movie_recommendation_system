@@ -14,7 +14,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(filename="preprocess.log", encoding="utf-8"),
+        logging.FileHandler(filename="src/preprocess.log", encoding="utf-8"),
         logging.StreamHandler(),
     ],
 )
@@ -77,8 +77,8 @@ for i in range(n_movies):
 
 # Save everything
 logging.info("💾 Saving preprocessed data and sparse cosine similarity matrix...")
-joblib.dump(data, "df_cleaned.pkl")
-save_npz("cosine_sim.npz", sparse_cosine_sim.tocsr())
+joblib.dump(data, "src/df_cleaned.pkl")
+save_npz("src/cosine_sim.npz", sparse_cosine_sim.tocsr())
 logging.info(
     "✅ Preprocessing complete. Data and sparse cosine similarity matrix saved."
 )
