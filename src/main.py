@@ -1,7 +1,7 @@
 import streamlit as st
 import json
-from src.recommend import recommend_movies, df
-from src.omdb_utils import getMovieDetails
+from recommend import recommend_movies, df
+from omdb_utils import getMovieDetails
 
 config = json.load(open('src/config.json'))
 
